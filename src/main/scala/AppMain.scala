@@ -21,7 +21,7 @@ object AppMain {
 //checking if the ip_addr is new. Initiate API call only when new ip is generated.
     if(ip_addr != oldIpAddress){
       write(ip_addr,file)
-      val url = "https://api.digitalocean.com/v2/domains/kadbyte.com/records/91880125"
+      val url = "https://api.digitalocean.com/v2/domains/example.com/records/12345"
       val authToken = Source.fromFile("config.txt").getLines().mkString
       updateInDroplet(url,authToken,ip_addr)
     }else{
